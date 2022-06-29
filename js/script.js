@@ -14,5 +14,21 @@
 
 // $ PALIDROMA - SVOLGIMENTO
 
+// @ Creiamo una funzione in grado di chiedere all'utente di inserire una parola
+
+function logSentence() {
+    let validWord;
+    let result;
+
+    do {
+        result = prompt('Inserisci una parola: ', 'parola');
+        validWord = isNaN(result) ? false : true;
+    } while (validWord)
+
+    return result;
+}
+const word = logSentence();
+
+console.log(word);
 
 // $ PARI E DISPARI - SVOLGIMENTO
