@@ -97,6 +97,36 @@ function isEven(sum) {
     return true;
 }
 
+// * Pari o dispari? Chi vincerà?
 
+// Dichiaro la variabile che manterrà la scelta dell'utente (pari o dispari)
 
+let userChoice;
+let isValid;
+
+do {
+    userChoice = prompt('Cosa scegli: "pari" o "dispari" ?', 'pari');
+    isValid = (userChoice !== 'pari' && userChoice !== 'dispari') ? false : true;
+} while (!isValid)
+
+// Facciamo scegliere all'utente un numero da 1 a 5
+
+const userNumber = logNumber();
+console.log(`Il numero scelto dall'utente è: ${userNumber}`);
+
+// Calcoliamo randomicamente il numero scelto dalla cpu
+
+const cpuNumber = randomNumber();
+console.log(`Il numero scelto dalla cpu è: ${cpuNumber}`);
+
+// Sommiamo i due numeri
+
+const somma = sum(userNumber, cpuNumber);
+console.log(`Il somma tra i due è: ${somma}`);
+
+// Dichiariamo il vincitore
+
+if ((isEven && userChoice === 'pari') || (!isEven && userChoice === 'dispari'))
+    console.log('Hai vinto!');
+else console.log('Hai perso!');
 
