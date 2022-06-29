@@ -74,5 +74,12 @@ function logNumber(min = 1, max = 5) {
     return userNumber;
 }
 
-const number = logNumber();
-console.log(number);
+// @ Creiamo una funzione in grado di calcolare un numero random da 1 a 5
+
+function randomNumber(min = 1, max = 5, isMaxIn = true) {
+    if (isMaxIn === true) max++;
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+
+
