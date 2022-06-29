@@ -90,6 +90,13 @@ function sum(a, b) {
     return (parseInt(a) + parseInt(b));
 }
 
+// @ Creiamo una funzione che determini se la somma data come parametro sia pari o dispari
+
+function isEven(sum) {
+    if (sum % 2) return false;
+    return true;
+}
+
 
 
 
