@@ -27,8 +27,22 @@ function logSentence() {
 
     return result;
 }
-const word = logSentence();
 
-console.log(word);
+// @ Creiamo una funzione in grado di verificare che la parola passata come parametro è 
+// @ palindroma
+
+function isPalindroma(word) {
+    let isPalindroma;
+    let reverseWord = '';
+
+    for (let i = word.length - 1; i >= 0; i--) {
+        reverseWord += word[i];
+    }
+
+    if (reverseWord === word) isPalindroma = true;
+    else isPalindroma = false;
+
+    return isPalindroma;
+}
 
 // $ PARI E DISPARI - SVOLGIMENTO
