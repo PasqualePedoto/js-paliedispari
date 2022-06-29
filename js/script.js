@@ -14,6 +14,8 @@
 
 // $ PALIDROMA - SVOLGIMENTO
 
+// * Creiamo tutte le funzioni
+
 // @ Creiamo una funzione in grado di chiedere all'utente di inserire una parola
 
 function logSentence() {
@@ -39,10 +41,19 @@ function isPalindroma(word) {
         reverseWord += word[i];
     }
 
+    console.log(reverseWord);
     if (reverseWord === word) isPalindroma = true;
     else isPalindroma = false;
 
     return isPalindroma;
 }
+
+// * Realizziamo l'algoritmo del primo esercizio servendoci delle funzioni precedentemente create
+
+const word = logSentence();
+const controll = isPalindroma(word);
+let sentence = `La parola ${word} non è palindroma!`;
+if (controll === true) sentence = `La parola ${word} è palindroma!`;
+console.log(sentence);
 
 // $ PARI E DISPARI - SVOLGIMENTO
