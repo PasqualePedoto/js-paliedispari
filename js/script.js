@@ -18,42 +18,61 @@
 
 // @ Creiamo una funzione in grado di chiedere all'utente di inserire una parola
 
-function logSentence() {
-    let validWord;
-    let result;
+// function logSentence() {
+//     let validWord;
+//     let result;
 
-    do {
-        result = prompt('Inserisci una parola: ', 'parola');
-        validWord = isNaN(result) ? false : true;
-    } while (validWord)
+//     do {
+//         result = prompt('Inserisci una parola: ', 'parola');
+//         validWord = isNaN(result) ? false : true;
+//     } while (validWord)
 
-    return result;
-}
+//     return result;
+// }
 
 // @ Creiamo una funzione in grado di verificare che la parola passata come parametro è 
 // @ palindroma
 
-function isPalindroma(word) {
-    let isPalindroma;
-    let reverseWord = '';
+// function isPalindroma(word) {
+//     let isPalindroma;
+//     let reverseWord = '';
 
-    for (let i = word.length - 1; i >= 0; i--) {
-        reverseWord += word[i];
-    }
+//     for (let i = word.length - 1; i >= 0; i--) {
+//         reverseWord += word[i];
+//     }
 
-    console.log(reverseWord);
-    if (reverseWord === word) isPalindroma = true;
-    else isPalindroma = false;
+//     console.log(reverseWord);
+//     if (reverseWord === word) isPalindroma = true;
+//     else isPalindroma = false;
 
-    return isPalindroma;
-}
+//     return isPalindroma;
+// }
 
 // * Realizziamo l'algoritmo del primo esercizio servendoci delle funzioni precedentemente create
 
-const word = logSentence();
-const controll = isPalindroma(word);
-let sentence = `La parola ${word} non è palindroma!`;
-if (controll === true) sentence = `La parola ${word} è palindroma!`;
-console.log(sentence);
+// const word = logSentence();
+// const controll = isPalindroma(word);
+// let sentence = `La parola ${word} non è palindroma!`;
+// if (controll === true) sentence = `La parola ${word} è palindroma!`;
+// console.log(sentence);
 
 // $ PARI E DISPARI - SVOLGIMENTO
+
+// * Creiamo tutte le funzioni
+
+// @ Creiamo una funzione in grado di chiedere all'utente di inserire un numero da 1 a 5
+
+function logNumber(min = 1, max = 5) {
+    let validNumber;
+    let userNumber;
+
+    do {
+        userNumber = parseInt(prompt('Inserisci un numero da 1 a 5: ', '2'));
+        validNumber = (isNaN(userNumber) || userNumber < 1 || userNumber > 5) ? false : true;
+    } while (!validNumber)
+
+    return userNumber;
+}
+
+const number = logNumber();
+console.log(number);
