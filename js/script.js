@@ -81,5 +81,15 @@ function randomNumber(min = 1, max = 5, isMaxIn = true) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
+// @ Creiamo una funzione somma
+
+function sum(a, b) {
+    const sentence = 'Non si possono sommare due non numeri';
+
+    if (isNaN(a) || isNaN(b) || a === '' || b === '') return sentence;
+    return (parseInt(a) + parseInt(b));
+}
+
+
 
 
