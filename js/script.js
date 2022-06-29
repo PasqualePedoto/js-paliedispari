@@ -18,43 +18,43 @@
 
 // @ Creiamo una funzione in grado di chiedere all'utente di inserire una parola
 
-// function logSentence() {
-//     let validWord;
-//     let result;
+function logSentence() {
+    let validWord;
+    let result;
 
-//     do {
-//         result = prompt('Inserisci una parola: ', 'parola');
-//         validWord = isNaN(result) ? false : true;
-//     } while (validWord)
+    do {
+        result = prompt('Inserisci una parola: ', 'parola');
+        validWord = isNaN(result) ? false : true;
+    } while (validWord)
 
-//     return result;
-// }
+    return result;
+}
 
 // @ Creiamo una funzione in grado di verificare che la parola passata come parametro è 
 // @ palindroma
 
-// function isPalindroma(word) {
-//     let isPalindroma;
-//     let reverseWord = '';
+function isPalindroma(word) {
+    let isPalindroma;
+    let reverseWord = '';
 
-//     for (let i = word.length - 1; i >= 0; i--) {
-//         reverseWord += word[i];
-//     }
+    for (let i = word.length - 1; i >= 0; i--) {
+        reverseWord += word[i];
+    }
 
-//     console.log(reverseWord);
-//     if (reverseWord === word) isPalindroma = true;
-//     else isPalindroma = false;
+    console.log(reverseWord);
+    if (reverseWord === word) isPalindroma = true;
+    else isPalindroma = false;
 
-//     return isPalindroma;
-// }
+    return isPalindroma;
+}
 
 // * Realizziamo l'algoritmo del primo esercizio servendoci delle funzioni precedentemente create
 
-// const word = logSentence();
-// const controll = isPalindroma(word);
-// let sentence = `La parola ${word} non è palindroma!`;
-// if (controll === true) sentence = `La parola ${word} è palindroma!`;
-// console.log(sentence);
+const word = logSentence();
+const controll = isPalindroma(word);
+let sentence = `La parola ${word} non è palindroma!`;
+if (controll === true) sentence = `La parola ${word} è palindroma!`;
+console.log(sentence);
 
 // $ PARI E DISPARI - SVOLGIMENTO
 
