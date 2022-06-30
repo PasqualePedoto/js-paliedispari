@@ -93,7 +93,7 @@ function sum(a, b) {
 // @ Creiamo una funzione che determini se la somma data come parametro sia pari o dispari
 
 function isEven(sum) {
-    if (sum % 2) return false;
+    if (sum % 2 !== 0) return false;
     return true;
 }
 
@@ -126,7 +126,7 @@ console.log(`Il somma tra i due è: ${somma}`);
 
 // Dichiariamo il vincitore
 
-if ((isEven && userChoice === 'pari') || (!isEven && userChoice === 'dispari'))
+if ((isEven(somma) && userChoice === 'pari') || (!isEven(somma) && userChoice === 'dispari'))
     console.log('Hai vinto!');
 else console.log('Hai perso!');
 
